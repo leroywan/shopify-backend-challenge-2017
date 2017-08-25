@@ -11,7 +11,7 @@
   "main": "backend-challenge.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend-challenge.js"
+    "start": "PORT=3000 node backend-challenge.js"
   },
   "author": "",
   "license": "ISC",
