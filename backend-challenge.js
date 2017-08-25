@@ -78,6 +78,11 @@ let validate = function(api, callback) {
     });
 }
 
+// // If you want to tweak and test out the function, uncoment the code below
+// validate('https://backend-challenge-winter-2017.herokuapp.com/customers.json', (filteredData)=>{
+//   console.log(filteredData);
+// })
+
 
 // create express server
 let express = require('express')
