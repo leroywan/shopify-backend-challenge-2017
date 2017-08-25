@@ -11,7 +11,9 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 640px;
+			height: 840px;
+			max-width: 740px;
+			margin: auto;
 		}
 
 		#url {
@@ -43,12 +45,20 @@
 </head>
 <body>
 	<div>
-		<p><strong>API provided:</strong> https://backend-challenge-winter-2017.herokuapp.com/customers.json</p>
-		<p><strong>Other Pages:</strong> https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=2</p>
+		<h3>This is just a demo to show that valid JSON is returned when provided with the proper API. Please take a look at the <a target="_blank" href="https://github.com/leroywan/shopify-backend-challenge-2017">Github Repo</a> to evalute the code. For my front end challenge, please check out my <a target="_blank" href="https://codepen.io/leroywan/pen/YxjrpG">Code Pen</a></h3> 
+		<br>
+		<p><strong>API provided:</strong> <br>https://backend-challenge-winter-2017.herokuapp.com/customers.json</p>
+		<p><strong>Other Pages:</strong> 
+			<br>https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=2
+			<br>https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=3
+			<br>https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=4
+			<br>https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=5
+		</p>
 		<form id="form" action="/filteredData" method="POST">
-			<input id="url" name="url" type="text" placeholder="Copy URL goes here">
+			<input id="url" name="url" type="text" placeholder="URL goes here" value="https://backend-challenge-winter-2017.herokuapp.com/customers.json">
 			<input type="submit" value="Get Invalid Customers">
 		</form>
+		
 	</div>
 	<script>
 		let form = document.getElementById('form');
