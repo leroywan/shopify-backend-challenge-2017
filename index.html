@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Shopify!</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+		body {
+			font-family: 'Source Sans Pro';
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 640px;
+		}
+
+		#url {
+			border: 0;
+			border-radius: 5px;
+			padding: 15px;
+			outline: none;
+			background: rgb(240, 240, 240);
+			width: 400px;
+			margin: 5px;
+		}
+
+		input[type="submit"] {
+			border: 0;
+			padding: 15px;
+			outline: none;
+			background: rgb(40, 40, 40);
+			color: white;
+			border-radius: 5px;
+			margin: 5px;
+			cursor: pointer;
+			transition: 0.2s ease-in opacity;
+		}
+
+		input[type="submit"]:hover {
+			opacity: 0.8;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p><strong>API provided:</strong> https://backend-challenge-winter-2017.herokuapp.com/customers.json</p>
+		<p><strong>Other Pages:</strong> https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=2</p>
+		<form id="form" action="/filteredData" method="POST">
+			<input id="url" name="url" type="text" placeholder="Copy URL goes here">
+			<input type="submit" value="Get Invalid Customers">
+		</form>
+	</div>
+	<script>
+		let form = document.getElementById('form');
+		let url = document.getElementById('url');
+		form.addEventListener('submit', (e)=>{
+			if (url.value.indexOf('https://backend-challenge-winter-2017.herokuapp.com/customers.json') === -1) {
+				e.preventDefault();
+				alert('This form only accepts the url starting with: https://backend-challenge-winter-2017.herokuapp.com/customers.json');
+			}
+		})
+	</script>
+</body>
+</html>
